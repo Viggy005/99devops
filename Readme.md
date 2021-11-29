@@ -29,6 +29,8 @@ end
 -create  folder 'mkdir foldername
 - how to navigate 'cd foldername' return step back 'cd .."
 -deleting file folders 'rm -rf namefolder/'
+- to read frist 2 liens of a file 'head -2 file_name"
+-to read last 1 line of a file 'tail -1 file_name
 
 > task: create a folder called test, create a file called text.txt inside
 the test folder then copy that to your hom location '/home/vagrant"'
