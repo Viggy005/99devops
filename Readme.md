@@ -1,8 +1,8 @@
 #devops intro 
 ##devops intro
-what is devops?
-why devops?
-benifits of devops?
+-what is devops?
+-why devops?
+-benifits of devops?
 -install vagrant
 -install Ruby
 
