@@ -7,9 +7,10 @@
 
 
 # createing a virtual machine with linux ubuntu 16.04
-# ubuntu/xenial1164
+## ubuntu/xenial1164
 
 Vagrant.configure("2") do |config|
+- vagrant file will run first after doing vagrant up
 - choose the os/box/distro
 - config.vm.box = "ubuntu/xenial64"
 - config.vm.network "forwarded_port", guest: 80, host: 8080(for mac port forwarding)
@@ -19,7 +20,7 @@ Vagrant.configure("2") do |config|
 
 **Linux commands**
 - sudo apy-get update -y
-- who am I "uname -a"
+- who am I ' uname -a ' 
 - Where am I 'pwd"
 - list dir or all 'ls" or 'ls -a'
 - copy file 'cp filename destination'
@@ -30,6 +31,9 @@ Vagrant.configure("2") do |config|
 - deleting file folders 'rm -rf namefolder/'
 - to read frist 2 liens of a file 'head -2 file_name"
 - to read last 1 line of a file 'tail -1 file_name
+- piping command is ued to take combine multiple commands "|"
+'command1 | command2' here input of command2 is command1
+- 
 
 > task: create a folder called test, create a file called text.txt inside
 the test folder then copy that to your hom location '/home/vagrant"'
@@ -75,6 +79,28 @@ the test folder then copy that to your hom location '/home/vagrant"'
 # Risk
 - Demands Strong team work
 - Resistance to change mind set
+
+# Enivronment vaiable
+- how to check env variable 'env'
+- DH_HOST = database
+- we need to use 'export'
+- export name=viggy , name becomes a environment variable
+- printenv name , will display viggy
+- once we exit nd agin ssh name does not show up
+>making env variable persistant 
+- ls -a, sudo nano .bashrc, add export name=value to end of file and save it. then source ~/.bashrc
+# Reverse Proxy:
+- https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04
+- dont forget to check if its all correct by ' sudo nginx -t'
+- dont forget to restart by 'sudo systemctl restart nginx'
+
+# create a app and db VM (multi-machine-environment) folder in devops_99
+- created a db vm and installed mongodb in it
+- https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04
+> manually set up in vm's:
+- created environemnt variable DB_HOSTS in app VM
+- set up reverse proxy to port 3000 in app VM
+
 
 
 
