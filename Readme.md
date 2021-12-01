@@ -98,8 +98,16 @@ the test folder then copy that to your hom location '/home/vagrant"'
 - created a db vm and installed mongodb in it
 - https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04
 > manually set up in vm's:
-- created environemnt variable DB_HOSTS in app VM
+- created environemnt variable export DB_HOST="mongodb://192.168.10.150:27017/posts" in app VM
 - set up reverse proxy to port 3000 in app VM
+- in db VM 'sudo nano /etc/mongod.conf' edit bindIP under network interface to IP address we allow(0.0.0.0 for all access) and save it
+- restart the mongodb 'sudo systemctl restart mongod'
+- enable the mongodb 'sudo systemctl enable mongod'
+- check status to make sure its running 'sudo systemctl status mongod'
+- seed the database: 'cd app/app/seeds' 'node seed.js'
+- run the app should work
+
+
 
 
 
