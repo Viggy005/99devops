@@ -15,6 +15,11 @@ sudo systemctl start mongod
 sudo systemctl status mongod
 sudo systemctl enable mongod
 sudo ufw allow 27017
+sudo rm -rf /etc/mongod.conf
+sudo cp /home/vagrant/app/mongod.conf /etc/mongod.conf
+sudo systemctl restart mongod
+sudo systemctl enable mongod
+sudo systemctl status mongod
 
 
 
