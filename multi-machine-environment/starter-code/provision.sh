@@ -20,6 +20,7 @@ cd app
 cd seeds
 node seed.js
 #waite
-#cd ..
+#cd app
+#cd app
 #npm install
 #npm start
